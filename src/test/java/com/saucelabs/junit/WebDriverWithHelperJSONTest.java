@@ -143,7 +143,7 @@ public class WebDriverWithHelperJSONTest implements SauceOnDemandSessionIdProvid
     public void validateTitle() throws Exception {
 
         capabilities = new DesiredCapabilities(browser, browserVersion, setPlatformCapabilities(platform));
-        capabilities.setCapability("name", this.getClass().getName() + "." + testName.getMethodName());
+        capabilities.setCapability("name", "Validate Amazon Title." + browserVersion);
         this.webDriver = new RemoteWebDriver(
                 new URL("http://" + authentication.getUsername() + ":" + authentication.getAccessKey() + "@ondemand.saucelabs.com:80/wd/hub"),
                 capabilities);
